@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #1a1a2e, #16213e);
+    color: white;
+    padding: 2rem;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(255,255,255,0.2);
+  }
+  
+  .action-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #2196F3;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+    z-index: 1000;
+  }
+  
+  .action-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  .leaderboard {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .leaderboard-header {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .player-row {
+    padding: 1rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    transition: background 0.2s;
+  }
+  
+  .rank-1 {
+    background-color: #3e442b; /* Golden look for first rank */
+  }
+  
+  .rank-2 {
+    background-color: #2e3a4b; /* Dark silver look for second rank */
+  }
+  
+  .rank-3 {
+    background-color: #463e3c; /* Bronze look for third rank */
+  }
+  
+  .player-row:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .player-row:nth-child(even) {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  .rank-number {
+    font-weight: bold;
+    color: #ffd700;
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      padding: 1rem;
+    }
+    
+    .player-row, .leaderboard-header {
+      padding: 0.8rem;
+    }
+  }
+  .player-input {
+    background: none;
+    border: none;
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0;
+    outline: none;
+  }
+  
+  .player-input:focus {
+    border-bottom: 1px solid #ffd700;
+  }
+  
+  .player-row:hover .player-input {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .player-input::selection {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
